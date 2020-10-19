@@ -13,6 +13,7 @@
         android:layout_marginTop="10dp"
         android:autofillHints="@string/app_name"
         android:hint="url"
+        android:text="ws:172.17.135.33:43496"
         android:inputType="text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

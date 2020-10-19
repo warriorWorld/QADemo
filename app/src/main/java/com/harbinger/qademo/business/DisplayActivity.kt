@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.harbinger.qademo.R
+import com.harbinger.qademo.listener.MessageListener
 import com.harbinger.qademo.utils.NetUtils
 import com.harbinger.qademo.websocket.MyWebSocketServer
 import io.reactivex.Observable
@@ -39,6 +40,11 @@ class DisplayActivity : AppCompatActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe {
                     server = MyWebSocketServer(InetSocketAddress(it, port))
+                    server?.messageListener = object : MessageListener {
+                        override fun onMessage(msg: String?) {
+                            result_tv.text = msg
+                        }
+                    }
                     server?.start()
 
                     Log.d(TAG, "ws:${it.hostAddress}:$port")
