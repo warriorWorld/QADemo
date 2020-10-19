@@ -6,14 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.harbinger.qademo.R
 import com.harbinger.qademo.utils.NetUtils
 import com.harbinger.qademo.websocket.MyWebSocketServer
-import com.harbinger.qademo.websocket.TestWebSocketServerHelper
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_display.*
 import java.net.InetAddress
 import java.net.InetSocketAddress
+import kotlinx.android.synthetic.main.activity_display.*
 
 /**
  * Created by acorn on 2020/10/19.
