@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".business.DisplayActivity" />
+        <activity android:name=".business.display.DisplayActivity" />
         <activity android:name=".business.InteractionActivity" />
     </application>
 

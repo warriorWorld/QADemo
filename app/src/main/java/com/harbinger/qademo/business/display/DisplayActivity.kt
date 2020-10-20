@@ -1,4 +1,4 @@
-package com.harbinger.qademo.business
+package com.harbinger.qademo.business.display
 
 import android.os.Bundle
 import android.util.Log
@@ -61,5 +61,6 @@ class DisplayActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         disposable?.dispose()
+        server?.stop()
     }
 }

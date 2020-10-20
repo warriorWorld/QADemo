@@ -3,7 +3,7 @@ package com.harbinger.qademo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.harbinger.qademo.business.DisplayActivity
+import com.harbinger.qademo.business.display.DisplayActivity
 import com.harbinger.qademo.business.InteractionActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
