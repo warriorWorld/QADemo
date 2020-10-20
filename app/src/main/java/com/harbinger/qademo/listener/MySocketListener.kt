@@ -13,30 +13,35 @@ class MySocketListener : WebSocketListener() {
     override fun onOpen(webSocket: WebSocket, response: Response) {
         super.onOpen(webSocket, response)
         // 有客户端连接时回调
-        Log.d(TAG, "client onOpen")
+//        Log.d(TAG, "client onOpen")
+        println("client onOpen")
     }
 
     override fun onMessage(webSocket: WebSocket, text: String) {
         super.onMessage(webSocket, text)
         // 收到新消息时回调
-        Log.d(TAG, "client onMessage:$text")
+//        Log.d(TAG, "client onMessage:$text")
+        println("client onMessage:$text")
     }
 
     override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
         super.onClosing(webSocket, code, reason)
         // 客户端主动关闭时回调
-        Log.d(TAG, "client onClosing code:$code,reason:$reason")
+//        Log.d(TAG, "client onClosing code:$code,reason:$reason")
+        println("client onClosing code:$code,reason:$reason")
     }
 
     override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
         super.onClosed(webSocket, code, reason)
         // WebSocket 连接关闭
-        Log.d(TAG, "client onClosed code:$code,reason:$reason")
+//        Log.d(TAG, "client onClosed code:$code,reason:$reason")
+        println("client onClosed code:$code,reason:$reason")
     }
 
     override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
         super.onFailure(webSocket, t, response)
         // 出错了
-        Log.d(TAG, "client onFailure err:${t.message}")
+//        Log.d(TAG, "client onFailure err:${t.message}")
+        println("client onFailure err:${t.message}")
     }
 }

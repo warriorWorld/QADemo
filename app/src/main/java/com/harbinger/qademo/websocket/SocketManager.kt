@@ -17,8 +17,9 @@ class SocketManager private constructor() {
         .pingInterval(60L, TimeUnit.SECONDS) //心跳间隔
         .retryOnConnectionFailure(true)
         .addInterceptor { chain ->
-            var request = chain.request()
-            Log.d(TAG, "Interceptor 执行了? ${request.url()}")
+            val request = chain.request()
+//            Log.d(TAG, "Interceptor 执行了? ${request.url()}")
+            println("Interceptor 执行了? ${request.url()}")
             chain.proceed(request)
         }
         .build()

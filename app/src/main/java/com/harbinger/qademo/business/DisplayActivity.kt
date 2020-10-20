@@ -42,12 +42,13 @@ class DisplayActivity : AppCompatActivity() {
                     server = MyWebSocketServer(InetSocketAddress(it, port))
                     server?.messageListener = object : MessageListener {
                         override fun onMessage(msg: String?) {
-                            result_tv.text = msg
+                            runOnUiThread { result_tv.text = msg }
                         }
                     }
                     server?.start()
 
-                    Log.d(TAG, "ws:${it.hostAddress}:$port")
+//                    Log.d(TAG, "ws:${it.hostAddress}:$port")
+                    println("ws:${it.hostAddress}:$port")
                     start_btn.text = "已连接：ws:${it.hostAddress}:$port"
                 }
         }

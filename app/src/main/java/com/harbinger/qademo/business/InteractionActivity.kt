@@ -33,6 +33,7 @@ class InteractionActivity : AppCompatActivity() {
             }
             SocketManager.instance.send(message_et.text.toString())
             Toast.makeText(this, "已发送", Toast.LENGTH_SHORT).show()
+            message_et.setText("")
         }
     }
 }
